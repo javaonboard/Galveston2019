@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Class-Path: javafx-base-11.0.2.jar javafx-controls-11.0.2.jar javafx-f
+ xml-11.0.2.jar javafx-controls-11.0.2-win.jar javafx-graphics-11.0.2-
+ win.jar hamcrest-core-1.1.jar javafx-fxml-11.0.2-win.jar javafx-graph
+ ics-11.0.2.jar gson-2.8.5.jar junit-4.10.jar json-simple-1.1.1.jar ja
+ vafx-base-11.0.2-win.jar
+Main-Class: com.galveston.Launcher
+

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galveston.MainController">
+   <top>
+      <ToolBar prefHeight="57.0" prefWidth="750.0" style="-fx-background-color: #b6eaf9;" BorderPane.alignment="CENTER">
+         <items>
+            <Arc fill="#7609b5" length="270.0" radiusX="13.0" radiusY="11.0" startAngle="45.0" stroke="#c9c9c9" strokeType="INSIDE" type="ROUND" />
+            <Label prefHeight="40.0" prefWidth="330.0" text="Raffle SignUp Application" textFill="#0066cd">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="status" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="179.0" textFill="#a000b9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="logout" disable="true" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="64.0" style="-fx-background-radius: 50; -fx-background-color: #920cff;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ButtonBar prefHeight="40.0" prefWidth="109.0">
+              <buttons>
+                <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #ffbf00; -fx-background-radius: 100; -fx-min-height: 25; -fx-min-width: 25; -fx-max-height: 25; -fx-max-width: 25;" text="-" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #00cc1b; -fx-background-radius: 100; -fx-min-height: 25; -fx-min-width: 25; -fx-max-height: 25; -fx-max-width: 25;" textAlignment="CENTER" textFill="#e8dddd">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#closeWindow" style="-fx-background-color: #ff0000; -fx-background-radius: 100; -fx-min-height: 25; -fx-min-width: 25; -fx-max-height: 25; -fx-max-width: 25;" text="X" textAlignment="CENTER" textFill="#e8dddd">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+              </buttons>
+            </ButtonBar>
+         </items>
+      </ToolBar>
+   </top>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #b6eaf9;" BorderPane.alignment="CENTER">
+         <items>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="735.0" text="© USITCC 2019 Galveston " textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </items>
+      </ToolBar>
+   </bottom>
+   <center>
+      <TabPane fx:id="mainTab" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Main">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="8.0" layoutY="12.0" prefHeight="355.0" prefWidth="730.0">
+                           <children>
+                              <SplitPane dividerPositions="0.38186813186813184" prefHeight="366.0" prefWidth="730.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <ToolBar layoutX="-2.0" layoutY="-6.0" prefHeight="40.0" prefWidth="278.0">
+                                             <items>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="254.0" text="Log In to Your Account" textFill="#757171">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </items>
+                                          </ToolBar>
+                                          <TextField fx:id="loginUser" layoutX="38.0" layoutY="49.0" prefHeight="25.0" prefWidth="200.0" promptText="Email or Username" />
+                                          <Button fx:id="login" layoutX="37.0" layoutY="122.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: #00c5ff;" text="Login" />
+                                          <Label fx:id="loginLabel" layoutX="33.0" layoutY="164.0" prefHeight="37.0" prefWidth="204.0" textFill="#eb0000" />
+                                          <PasswordField fx:id="loginPass" layoutX="38.0" layoutY="85.0" prefHeight="25.0" prefWidth="200.0" promptText="Password" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <ToolBar prefHeight="34.0" prefWidth="447.0">
+                                             <items>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="425.0" text="Create New Account" textFill="#757171">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </items>
+                                          </ToolBar>
+                                          <SplitPane layoutX="5.0" layoutY="39.0" prefHeight="308.0" prefWidth="436.0">
+                                             <items>
+                                                <AnchorPane prefHeight="306.0" prefWidth="316.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="7.0" prefHeight="306.0" prefWidth="427.0">
+                                                         <children>
+                                                            <TextField fx:id="fName" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" promptText="FirstName" />
+                                                            <TextField fx:id="mName" layoutX="149.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" promptText="Middle Initial" />
+                                                            <TextField fx:id="lName" layoutX="283.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" promptText="LastName" />
+                                                            <TextField fx:id="user" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="130.0" promptText="Username" />
+                                                            <TextField fx:id="address" layoutX="14.0" layoutY="83.0" prefHeight="25.0" prefWidth="264.0" promptText="Address" />
+                                                            <TextField fx:id="city" layoutX="283.0" layoutY="83.0" prefHeight="25.0" prefWidth="130.0" promptText="City" />
+                                                            <TextField fx:id="state" accessibleRole="LIST_ITEM" layoutX="14.0" layoutY="120.0" prefHeight="25.0" prefWidth="61.0" promptText="State" />
+                                                            <TextField fx:id="zip" accessibleRole="LIST_ITEM" layoutX="88.0" layoutY="120.0" prefHeight="25.0" prefWidth="61.0" promptText="ZipCode" />
+                                                            <TextField fx:id="phone" layoutX="14.0" layoutY="153.0" promptText="Phone Number" />
+                                                            <TextField fx:id="email" layoutX="172.0" layoutY="153.0" prefHeight="29.0" prefWidth="240.0" promptText="Email" />
+                                                            <Button fx:id="create" layoutX="13.0" layoutY="194.0" mnemonicParsing="false" onAction="#createUser" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00c5ff;" text="Create" />
+                                                            <Label fx:id="createOutPut" alignment="TOP_LEFT" layoutX="179.0" layoutY="192.0" prefHeight="35.0" prefWidth="237.0" textFill="#ff0303" />
+                                                            <Label fx:id="successOutPut" layoutX="186.0" layoutY="192.0" prefHeight="30.0" prefWidth="186.0" textFill="#13e100" />
+                                                            <PasswordField fx:id="pass" layoutX="149.0" layoutY="50.0" prefHeight="25.0" prefWidth="130.0" promptText="Password" />
+                                                            <PasswordField fx:id="cPass" layoutX="283.0" layoutY="50.0" prefHeight="25.0" prefWidth="130.0" promptText="Confirm Password" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="eventTab" disable="true" text="Events">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane layoutX="4.0" layoutY="3.0" orientation="VERTICAL" prefHeight="366.0" prefWidth="740.0">
+                          <items>
+                            <AnchorPane>
+                                 <children>
+                                    <TableView fx:id="evTableView" layoutX="5.0" prefHeight="359.0" prefWidth="385.0">
+                                      <columns>
+                                        <TableColumn fx:id="evTableId" prefWidth="73.0" text="ID" />
+                                          <TableColumn fx:id="evTableName" prefWidth="257.0" text="Name" />
+                                          <TableColumn fx:id="evAction" prefWidth="54.0" text="Action" />
+                                      </columns>
+                                    </TableView>
+                                    <Label fx:id="drawLabel" layoutX="399.0" layoutY="14.0" prefHeight="64.0" prefWidth="333.0" textFill="#ff00c8">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="drawCode" alignment="CENTER" layoutX="454.0" layoutY="109.0" prefHeight="46.0" prefWidth="198.0" promptText="Draw Code">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button layoutX="454.0" layoutY="167.0" mnemonicParsing="false" onAction="#getDraw" prefHeight="48.0" prefWidth="199.0" text="Submit" />
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="rewardTab" disable="true" text="Prize">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="prizeTable" layoutX="5.0" layoutY="3.0" prefHeight="359.0" prefWidth="742.0">
+                          <columns>
+                            <TableColumn fx:id="prizeName" prefWidth="619.0" text="Prize Name" />
+                            <TableColumn fx:id="prizeAction" minWidth="0.0" prefWidth="113.0" text="Action" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="adminTab" disable="true" text="Adminstration">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane layoutX="7.0" layoutY="3.0" prefHeight="368.0" prefWidth="738.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="adminTable" layoutX="2.0" layoutY="2.0" prefHeight="362.0" prefWidth="732.0">
+                                      <columns>
+                                        <TableColumn fx:id="adminFamily" prefWidth="214.0" text="Family" />
+                                        <TableColumn fx:id="adminRequest" prefWidth="430.0" text="Request" />
+                                          <TableColumn fx:id="adminAction" prefWidth="87.0" text="Action" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
